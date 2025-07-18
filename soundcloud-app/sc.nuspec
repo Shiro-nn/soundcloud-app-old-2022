@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SoundCloud</id>
+    <title>SoundCloud</title>
+    <version>0.8.10</version>
+    <authors>fydne</authors>
+    <owners>fydne</owners>
+    <iconUrl>C:\Users\fydne1\Desktop\code\js\soundcloud\soundcloud-app\icons\appLogo.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>soundcloud desktop app</description>
+    <copyright>Copyright © 2022 fydne</copyright>
+  </metadata>
+  <files>
+    <file src="locales\**" target="lib\net45\locales" />
+    <file src="resources\**" target="lib\net45\resources" />
+    <file src="*.bin" target="lib\net45" />
+    <file src="*.dll" target="lib\net45" />
+    <file src="*.pak" target="lib\net45" />
+    <file src="*.exe.config" target="lib\net45" />
+    <file src="*.exe.sig" target="lib\net45" />
+    <file src="icudtl.dat" target="lib\net45\icudtl.dat" />
+    <file src="Squirrel.exe" target="lib\net45\squirrel.exe" />
+    <file src="LICENSE" target="lib\net45\LICENSE" />
+    <file src="SoundCloud.exe" target="lib\net45\SoundCloud.exe" />
+    
+  </files>
+</package>

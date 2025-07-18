@@ -1,0 +1,1 @@
+{"name":"soundcloud-desktop","main":"injector.js","version":"0.0.4","dependencies":{"appdata-path":"^1.0.0","qurre-socket":"^1.0.5"}}

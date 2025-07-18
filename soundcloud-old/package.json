@@ -1,0 +1,42 @@
+{
+	"name": "soundcloud-app",
+	"version": "0.9.5",
+	"description": "soundcloud desktop app",
+	"main": "soundcloud.js",
+	"scripts": {
+		"build": "electron-builder"
+	},
+	"author": "fydne",
+	"license": "MIT",
+	"productName": "SoundCloud",
+	"build": {
+		"appId": "SoundCloud",
+		"win": {
+			"target": [
+				{
+					"target": "nsis",
+					"arch": [
+						"x64",
+						"ia32"
+					]
+				}
+			],
+			"icon": "icons/appLogo.ico"
+		}
+	},
+	"devDependencies": {
+		"electron": "^23.1.1"
+	},
+	"dependencies": {
+		"@electron/get": "^2.0.2",
+		"@electron/remote": "^2.0.9",
+		"appdata-path": "^1.0.0",
+		"domify": "^1.4.1",
+		"electron-find": "^1.0.7",
+		"https-proxy-agent": "^5.0.1",
+		"node-fetch": "^2.6.9",
+		"notify-manager-electron": "^1.0.2",
+		"qurre-socket": "^1.0.5",
+		"winreg": "^1.2.4"
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "name": "soundcloud-discord-app-fix",
+  "version": "1.0.0",
+  "description": "just fix for discord on Windows 11",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fydne",
+  "license": "Apache-2.0"
+}

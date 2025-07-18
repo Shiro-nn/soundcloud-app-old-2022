@@ -1,0 +1,76 @@
+{
+	"name": "soundcloud-app",
+	"version": "0.8.11",
+	"scdv": "0.0.4",
+	"description": "soundcloud desktop app",
+	"main": "soundcloud.js",
+	"scripts": {
+		"app:dir": " electron-builder --dir ",
+		"build": " electron-builder ",
+		"start": "electron .",
+		"bpack": "electron-builder --dir",
+		"dist": "electron-builder",
+		"pack": "electron-packager . --all",
+		"test": "electron-packager .",
+		"package-mac": "electron-packager . --overwrite --asar --platform=darwin --arch=x64 --icon=icons/appLogo.icns --prune=true --out=release-builds --darwinDarkModeSupport=true",
+		"package-win": "electron-packager . SoundCloud --overwrite --asar --platform=win32 --arch=ia32 --icon=icons/appLogo.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"SoundCloud\"",
+		"package-linux": "electron-packager . SoundCloud --overwrite --asar --platform=linux --arch=x64 --icon=icons/appLogo.png --prune=true --out=release-builds",
+		"create-installer-mac": "electron-installer-dmg ./release-builds/Electron\\ tutorial\\ app-darwin-x64/Electron\\ tutorial\\ app.app electron-tutorial-app --out=release-builds --overwrite --icon=assets/icons/mac/icon.icns",
+		"create-installer-win": "node installers/windows/createinstaller.js",
+		"create-debian-installer": "electron-installer-debian --src release-builds/electron-tutorial-app-linux-x64/ --arch amd64 --config debian.json"
+	},
+	"author": "fydne",
+	"license": "Apache-2.0",
+	"productName": "SoundCloud",
+	"build": {
+		"appId": "SoundCloud",
+		"mac": {
+			"category": "public.app-category.social-networking",
+			"target": [
+				"dmg",
+				"zip"
+			],
+			"icon": "icons/appLogo.ico"
+		},
+		"linux": {
+			"target": [
+				"AppImage",
+				"deb",
+				"rpm",
+				"freebsd",
+				"pacman",
+				"p5p",
+				"apk"
+			],
+			"icon": "icons/appLogo.ico"
+		},
+		"win": {
+			"target": [
+				{
+					"target": "nsis",
+					"arch": [
+						"x64",
+						"ia32"
+					]
+				}
+			],
+			"icon": "icons/appLogo.ico"
+		}
+	},
+	"devDependencies": {
+		"electron": "^21.2.0",
+		"electron-winstaller": "^5.1.0"
+	},
+	"dependencies": {
+		"@electron/get": "^2.0.2",
+		"@electron/remote": "^2.0.8",
+		"appdata-path": "^1.0.0",
+		"discord-rich-presence": "^0.0.8",
+		"domify": "^1.4.1",
+		"electron-find": "^1.0.7",
+		"nodejs-file-downloader": "^4.10.2",
+		"protocol-registry": "^1.3.16",
+		"qurre-socket": "^1.0.5",
+		"request": "^2.88.2"
+	}
+}

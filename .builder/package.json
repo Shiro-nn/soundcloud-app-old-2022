@@ -1,0 +1,12 @@
+{
+  "name": "sc-builder",
+  "version": "0.0.0",
+  "description": "",
+  "main": "win.js",
+  "scripts": {},
+  "author": "fydne",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-builder": "^23.6.0"
+  }
+}
